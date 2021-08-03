@@ -2,63 +2,68 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-
+const generateMarkdown = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
 const questions = [{
         type: 'input',
-        name: 'title',
+        name: 'Title',
         message: 'What is the name of your project?'
     },
     {
         type: 'input',
-        name: 'table of contents',
-        message: 'Table of Contents'
-    },
-    {
-        type: 'input',
-        name: 'description',
+        name: 'Description',
         message: 'Give a detailed description of your project'
     },
     {
         type: 'input',
-        name: 'installation',
+        name: 'Table of Contents',
+        message: 'Table of Contents'
+    },
+    {
+        type: 'input',
+        name: 'Installation',
         message: 'What dependencies did you install for this project?'
     },
     {
         type: 'input',
-        name: 'usage',
-        message: 'What is your project used for?'
+        name: 'Usage',
+        message: 'How is your project used?'
     },
     {
         type: 'input',
-        name: 'license',
-        message: 'What kind of license does your porject need?'
+        name: 'License',
+        message: 'What kind of license does your project need?'
     },
     {
         type: 'input',
-        name: 'contributions',
+        name: 'Contributions',
         message: 'Who contributed to this project?'
     },
     {
         type: 'input',
-        name: 'tests',
+        name: 'Tests',
         message: 'How did you test your app?'
     },
     {
         type: 'input',
-        name: 'questions',
-        message: 'what is your GitHub?'
+        name: 'Questions',
+        message: 'What is your contact info for inquiries'
     },
     {
         type: 'input',
-        name: 'questions',
-        message: 'what is your email?'
+        name: 'Github',
+        message: 'what is your GitHub username?'
+    },
+    {
+        type: 'input',
+        name: 'Email',
+        message: 'what is your email address?'
     }
 ];
 
 // TODO: Create a function to write README file
-const writeToFile = (fileName, data) => {
-    fs.writeToFile(fileName, data, function(err) {
+const writeFile = (fileName, data) => {
+    fs.writeFile(fileName, data, function(err) {
         console.log(fileName),
             console.log(data),
             err ? console.log(err) : console.log("README.md successfully created!")
@@ -69,7 +74,7 @@ const writeToFile = (fileName, data) => {
 const init = () => {
     inquirer.prompt(questions)
         .then(function(data) {
-            writeToFile("README.md", generateMarkdown(data));
+            writeFile("README.md", generateMarkdown(data));
             console.log(data)
         })
 }
