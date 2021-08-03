@@ -16,8 +16,8 @@ const questions = [{
     },
     {
         type: 'input',
-        name: 'Table of Contents(Press Enter)',
-        message: 'Table of Contents'
+        name: 'TableOfContents',
+        message: 'Table of Contents-(Press Enter)'
     },
     {
         type: 'input',
@@ -27,7 +27,7 @@ const questions = [{
     {
         type: 'input',
         name: 'Usage',
-        message: 'How is your project used?'
+        message: 'What are the steps to take for this app to be used?'
     },
     {
         type: 'input',
@@ -47,12 +47,12 @@ const questions = [{
     {
         type: 'input',
         name: 'Github',
-        message: 'what is your GitHub username?'
+        message: 'What is your GitHub username?'
     },
     {
         type: 'input',
         name: 'Email',
-        message: 'what is your email address?'
+        message: 'What is your email address?'
     }
 ];
 
