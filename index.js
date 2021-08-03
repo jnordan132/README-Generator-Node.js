@@ -16,7 +16,7 @@ const questions = [{
     },
     {
         type: 'input',
-        name: 'Table of Contents',
+        name: 'Table of Contents(Press Enter)',
         message: 'Table of Contents'
     },
     {
@@ -43,11 +43,6 @@ const questions = [{
         type: 'input',
         name: 'Tests',
         message: 'How did you test your app?'
-    },
-    {
-        type: 'input',
-        name: 'Questions',
-        message: 'What is your contact info for inquiries'
     },
     {
         type: 'input',
