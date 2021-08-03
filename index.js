@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const util = require('util');
 
 // TODO: Create an array of questions for user input
 const questions = [{
@@ -10,8 +11,13 @@ const questions = [{
     },
     {
         type: 'input',
+        name: 'table of contents',
+        message: 'Table of Contents'
+    },
+    {
+        type: 'input',
         name: 'description',
-        message: 'Give a summary of your project'
+        message: 'Give a detailed description of your project'
     },
     {
         type: 'input',
@@ -52,7 +58,9 @@ const questions = [{
 
 // TODO: Create a function to write README file
 const writeToFile = (fileName, data) => {
-    fs.appendFile(fileName, data, (err) =>
+    fs.writeToFile(fileName, data, (err) =>
+        console.log(fileName),
+        console.log(data),
         err ? console.log(err) : console.log("README.md successfully created!"))
 }
 
