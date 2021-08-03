@@ -52,11 +52,12 @@ const questions = [{
 
 // TODO: Create a function to write README file
 const writeToFile = (fileName, data) => {
-
+    fs.appendFile(fileName, data, (err) =>
+        err ? console.log(err) : console.log("README.md successfully created!"))
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+const init = () => {}
 
 // Function call to initialize app
 init();
