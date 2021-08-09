@@ -32,12 +32,12 @@ const questions = [{
     {
         type: 'confirm',
         name: 'License',
-        message: 'Does your project need a license?',
+        message: 'Does your project need a license?'
     },
     {
         type: 'input',
         name: 'LicenseType',
-        message: 'Which license is needed for this project?',
+        message: 'Which license is needed for this project?'
     },
     {
         type: 'input',
@@ -64,8 +64,7 @@ const questions = [{
 // Writes generateMarkdown to README file
 const writeFile = (fileName, data) => {
     fs.writeFile(fileName, data, function(err) {
-        console.log(fileName),
-            console.log(data),
+        console.log(data),
             err ? console.log(err) : console.log("README.md successfully created!")
     })
 }
