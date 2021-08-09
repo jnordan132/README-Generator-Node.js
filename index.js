@@ -30,9 +30,14 @@ const questions = [{
         message: 'What are the steps to take for this app to be used?'
     },
     {
-        type: 'input',
+        type: 'confirm',
         name: 'License',
-        message: 'What kind of license does your project need?'
+        message: 'Does your project need a license?',
+    },
+    {
+        type: 'input',
+        name: 'LicenseType',
+        message: 'Which license is needed for this project?',
     },
     {
         type: 'input',
