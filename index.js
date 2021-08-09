@@ -74,7 +74,6 @@ const writeFile = (fileName, data) => {
 const init = () => {
     inquirer.prompt(questions)
         .then(function(data) {
-            console.log(data);
             writeFile("README.md", generateMarkdown(data));
             console.log(data)
         })
