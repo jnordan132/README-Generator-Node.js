@@ -1,6 +1,6 @@
 # README-Generator
-https://github.com/jnordan132/README-Generator
-https://drive.google.com/file/d/106cxq5irtSGW6HwwyRNZzPeTsDeYS7En/view
+[GitHub Repo](https://github.com/jnordan132/README-Generator)\
+[Video Showing Use](https://drive.google.com/file/d/106cxq5irtSGW6HwwyRNZzPeTsDeYS7En/view)
 # Description
 This application gives a user the possibility to have an automated README.md file generated through Node.js runtime enviroment, a series of questions is asked and based on your answers a README.md file will be generated and formatted.
 # Table of Contents 
